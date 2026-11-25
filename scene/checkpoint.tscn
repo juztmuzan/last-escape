@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://4habcl5sgr81"]
+
+[ext_resource type="Script" uid="uid://bvgcl78m6ykfs" path="res://script/checkpoint.gd" id="1_rsc5n"]
+[ext_resource type="Texture2D" uid="uid://dhxfyywaa37l5" path="res://assets/checkpoint/Pixel Art Racing Flag Sprite Sheet.png" id="2_1s6i5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk1eg"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(0, 0, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_230tk"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(384, 0, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxyni"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(768, 0, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oisqg"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(1152, 0, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kjes"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(0, 512, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro5j5"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(384, 512, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tox4v"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(768, 512, 384, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryyqd"]
+atlas = ExtResource("2_1s6i5")
+region = Rect2(1152, 512, 384, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrplr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk1eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_230tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxyni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oisqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kjes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro5j5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tox4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryyqd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrplr"]
+radius = 12.0
+height = 38.0
+
+[node name="checkpoint" type="Area2D" unique_id=1491660991]
+script = ExtResource("1_rsc5n")
+
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=932726657]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_wrplr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1407747016]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_wrplr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

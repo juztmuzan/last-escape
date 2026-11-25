@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dxjeqphs3r08q"]
+
+[ext_resource type="Texture2D" uid="uid://cbse2j8jxupu2" path="res://assets/collection/sprite-animation-64x64-8f-sheet.png" id="1_1uvfd"]
+[ext_resource type="Script" uid="uid://cs4ntangn6fs2" path="res://script/ember.gd" id="1_bgbhq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgbhq"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg5dl"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si86j"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddwbm"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvcru"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b58y6"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ussa"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0alk4"]
+atlas = ExtResource("1_1uvfd")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrplr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgbhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg5dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si86j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddwbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvcru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b58y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ussa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0alk4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrplr"]
+radius = 16.0
+height = 46.0
+
+[node name="ember" type="Node2D" unique_id=172676774]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_bgbhq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522969900]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wrplr")
+autoplay = "default"
+frame_progress = 0.8649789
+
+[node name="Area2D" type="Area2D" parent="." unique_id=333333694]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1846351672]
+shape = SubResource("CapsuleShape2D_wrplr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://y1yfmd3wf7e2"]
+
+[ext_resource type="Script" uid="uid://dkf4jpuw3k8gs" path="res://script/ember_ui.gd" id="1_8rtda"]
+[ext_resource type="Texture2D" uid="uid://cbse2j8jxupu2" path="res://assets/collection/sprite-animation-64x64-8f-sheet.png" id="2_r4xqa"]
+[ext_resource type="FontFile" uid="uid://bdwf5sr20ptfm" path="res://assets/font/arcadeclassic/ARCADECLASSIC.TTF" id="3_v0u1c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrplr"]
+atlas = ExtResource("2_r4xqa")
+region = Rect2(2, 2, 60.800003, 64)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r4xqa"]
+font = ExtResource("3_v0u1c")
+font_size = 24
+
+[node name="ember ui" type="Control" unique_id=841531484]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8rtda")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1232348925]
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 64.0
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer" unique_id=2012229423]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wrplr")
+
+[node name="Count" type="Label" parent="HBoxContainer" unique_id=256313394]
+texture_filter = 1
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_r4xqa")
