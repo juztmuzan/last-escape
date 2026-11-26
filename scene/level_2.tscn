@@ -19,7 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://4habcl5sgr81" path="res://scene/checkpoint.tscn" id="23_xgnfs"]
 [ext_resource type="Script" uid="uid://o6btlu0nxsjv" path="res://script/camera_2d.gd" id="24_4knub"]
 [ext_resource type="PackedScene" uid="uid://br3pq2yrcddep" path="res://scene/spike.tscn" id="25_36lra"]
+[ext_resource type="Texture2D" uid="uid://c24x5dlo1lnwx" path="res://assets/background/Level_2/01_langit.png" id="27_nxrem"]
+[ext_resource type="Texture2D" uid="uid://2jxmbt7vik6q" path="res://assets/background/Level_2/02_pohon_jauh.png" id="28_o4omm"]
+[ext_resource type="Texture2D" uid="uid://bypoe4aldp5bm" path="res://assets/background/Level_2/03_cahaya_api.png" id="29_3d7dk"]
+[ext_resource type="Texture2D" uid="uid://3enyv706hieg" path="res://assets/background/Level_2/04_asap.png" id="30_c46bp"]
+[ext_resource type="Texture2D" uid="uid://ctdwdlwlh7d0o" path="res://assets/background/Level_2/05_api.png" id="31_ko8js"]
+[ext_resource type="Texture2D" uid="uid://dtfi46xb8jsyx" path="res://assets/background/Level_2/06_pohon_tengah.png" id="32_cerx1"]
 [ext_resource type="Texture2D" uid="uid://dn2ap6mdc4mjb" path="res://assets/character/player/jump/jump_01.png" id="33_m34xv"]
+[ext_resource type="Texture2D" uid="uid://400fid46vdio" path="res://assets/background/Level_2/07_pohon_depan.png" id="33_u01km"]
 [ext_resource type="Texture2D" uid="uid://cfupp4ifc0jb1" path="res://assets/character/player/run/run_01.png" id="34_looqq"]
 [ext_resource type="Texture2D" uid="uid://ciotg4lgtg6nt" path="res://assets/character/player/run/run_02.png" id="35_mfb87"]
 [ext_resource type="Texture2D" uid="uid://dyw5nu16tegb8" path="res://assets/character/player/run/run_03.png" id="36_142yk"]
@@ -509,6 +516,85 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=805303783]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=494502134]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1804586246]
+texture_filter = 1
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("27_nxrem")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=381722700]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1928590828]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("28_o4omm")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1209087450]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=1623772499]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("29_3d7dk")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1544331103]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=966027489]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("30_c46bp")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=72916801]
+motion_scale = Vector2(0.3, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=924436819]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("31_ko8js")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground" unique_id=105613011]
+motion_scale = Vector2(0.45, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6" unique_id=1102938248]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("32_cerx1")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1420444130]
+motion_scale = Vector2(0.6, 0)
+motion_mirroring = Vector2(1375, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7" unique_id=266497368]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(0.753, 0.753)
+texture = ExtResource("33_u01km")
+centered = false
 
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
 [connection signal="timeout" from="killzone/Timer" to="killzone" method="_on_timer_timeout"]
