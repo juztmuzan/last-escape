@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://foy134ogg6gl"
-path="res://.godot/imported/forest_long.png-7d555b187c7c6d55db30d5d544c73d98.ctex"
+uid="uid://ctgfhsm1pex6"
+path="res://.godot/imported/04_pohon_depan.png-1b32b8f1e12a456a32a30d1dce0a98b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/level_1/forest_long.png"
-dest_files=["res://.godot/imported/forest_long.png-7d555b187c7c6d55db30d5d544c73d98.ctex"]
+source_file="res://assets/background/level_1/04_pohon_depan.png"
+dest_files=["res://.godot/imported/04_pohon_depan.png-1b32b8f1e12a456a32a30d1dce0a98b9.ctex"]
 
 [params]
 

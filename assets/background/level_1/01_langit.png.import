@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbj2qtg47f3de"
-path="res://.godot/imported/bg_siang.jpeg-536f305baca532fd24aaf24623125f6f.ctex"
+uid="uid://diky5xrhti8nf"
+path="res://.godot/imported/01_langit.png-9ecf4c02dcf4877df04e5ff9d12e757e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/level_1/bg_siang.jpeg"
-dest_files=["res://.godot/imported/bg_siang.jpeg-536f305baca532fd24aaf24623125f6f.ctex"]
+source_file="res://assets/background/level_1/01_langit.png"
+dest_files=["res://.godot/imported/01_langit.png-9ecf4c02dcf4877df04e5ff9d12e757e.ctex"]
 
 [params]
 

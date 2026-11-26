@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjm6rgypwg0y"
-path="res://.godot/imported/forest_back.png-f52a61dde09d511fcaa23e1968e3fb79.ctex"
+uid="uid://dve6k34xxe2vt"
+path="res://.godot/imported/03_pohon_tengah.png-a0162493224efdc2d56c0a64b892ec18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/level_1/forest_back.png"
-dest_files=["res://.godot/imported/forest_back.png-f52a61dde09d511fcaa23e1968e3fb79.ctex"]
+source_file="res://assets/background/level_1/03_pohon_tengah.png"
+dest_files=["res://.godot/imported/03_pohon_tengah.png-a0162493224efdc2d56c0a64b892ec18.ctex"]
 
 [params]
 
