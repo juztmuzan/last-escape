@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://cxlt7n7d8b1fu"]
+
+[ext_resource type="FontFile" uid="uid://bdwf5sr20ptfm" path="res://assets/font/arcadeclassic/ARCADECLASSIC.TTF" id="1_qqrbj"]
+
+[resource]
+default_font = ExtResource("1_qqrbj")
+default_font_size = 24

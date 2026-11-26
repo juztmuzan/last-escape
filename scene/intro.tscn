@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dgpavjc1wx22s"]
+
+[ext_resource type="Theme" uid="uid://cxlt7n7d8b1fu" path="res://assets/font/default_theme.tres" id="1_srnjo"]
+[ext_resource type="Script" uid="uid://3708lsf37n77" path="res://script/intro.gd" id="1_yv8ol"]
+[ext_resource type="FontFile" uid="uid://bdwf5sr20ptfm" path="res://assets/font/arcadeclassic/ARCADECLASSIC.TTF" id="2_srnjo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wrplr"]
+font = ExtResource("2_srnjo")
+font_size = 24
+
+[node name="intro" type="Control" unique_id=1523375014]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_srnjo")
+script = ExtResource("1_yv8ol")
+
+[node name="bg_hitam" type="ColorRect" parent="." unique_id=1870694242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="lbl_teks" type="Label" parent="." unique_id=885157995]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_wrplr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="btn_lewat" type="Button" parent="." unique_id=210276854]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Lewati"
+
+[node name="timer_ketik" type="Timer" parent="." unique_id=392137233]
+wait_time = 0.1
+one_shot = true
