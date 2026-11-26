@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xl3an0qwhx08"]
 
 [ext_resource type="Script" uid="uid://c8n0lkqmryqj2" path="res://script/main_menu.gd" id="1_3er1b"]
+[ext_resource type="Theme" uid="uid://cxlt7n7d8b1fu" path="res://assets/font/default_theme.tres" id="1_hxu56"]
 
 [node name="main_menu" type="Control" unique_id=1311656891]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_hxu56")
 script = ExtResource("1_3er1b")
 
 [node name="btn_mulai" type="Button" parent="." unique_id=1546132092]
