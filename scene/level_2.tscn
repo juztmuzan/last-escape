@@ -27,11 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://dtfi46xb8jsyx" path="res://assets/background/Level_2/06_pohon_tengah.png" id="32_cerx1"]
 [ext_resource type="Texture2D" uid="uid://dn2ap6mdc4mjb" path="res://assets/character/player/jump/jump_01.png" id="33_m34xv"]
 [ext_resource type="Texture2D" uid="uid://400fid46vdio" path="res://assets/background/Level_2/07_pohon_depan.png" id="33_u01km"]
-[ext_resource type="Texture2D" uid="uid://cfupp4ifc0jb1" path="res://assets/character/player/run/run_01.png" id="34_looqq"]
 [ext_resource type="Texture2D" uid="uid://ciotg4lgtg6nt" path="res://assets/character/player/run/run_02.png" id="35_mfb87"]
-[ext_resource type="Texture2D" uid="uid://dyw5nu16tegb8" path="res://assets/character/player/run/run_03.png" id="36_142yk"]
 [ext_resource type="Texture2D" uid="uid://bxyukn6ijarxu" path="res://assets/character/player/run/run_04.png" id="37_u0tq3"]
-[ext_resource type="Texture2D" uid="uid://centac882onqm" path="res://assets/character/player/run/run_05.png" id="38_74pqi"]
 [ext_resource type="Texture2D" uid="uid://b3iltuqygfpb7" path="res://assets/character/player/run/run_06.png" id="39_64hvb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_owiqf"]
@@ -271,26 +268,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("34_looqq")
-}, {
-"duration": 1.0,
 "texture": ExtResource("35_mfb87")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_142yk")
-}, {
-"duration": 1.0,
 "texture": ExtResource("37_u0tq3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_74pqi")
 }, {
 "duration": 1.0,
 "texture": ExtResource("39_64hvb")
 }],
 "loop": 1,
 "name": &"run",
-"speed": 20.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_owiqf"]
@@ -418,6 +406,7 @@ zoom = Vector2(3.5, 3.5)
 limit_bottom = 999999
 limit_smoothed = true
 position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 script = ExtResource("24_4knub")
 max_y = 1100.0
 
@@ -501,7 +490,7 @@ script = ExtResource("5_dhtra")
 texture_filter = 1
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_wrplr")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1627780832]

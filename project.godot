@@ -15,9 +15,14 @@ run/main_scene="uid://xl3an0qwhx08"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://glb8cka6ic66"
+
 [autoload]
 
 Controller="*uid://bp05hkl8cib57"
+BackSound="*uid://cfed3m6cgbh1c"
 
 [display]
 
@@ -63,6 +68,7 @@ interact={
 
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=1300.0
+common/physics_interpolation=true
 
 [rendering]
 

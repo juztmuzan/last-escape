@@ -19,11 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cm6gs7vyi1lp2" path="res://assets/character/player/idle/idle_07.png" id="17_5f4cu"]
 [ext_resource type="Texture2D" uid="uid://xmmtrbfkj6e5" path="res://assets/character/player/idle/idle_08.png" id="18_c30lh"]
 [ext_resource type="Texture2D" uid="uid://dn2ap6mdc4mjb" path="res://assets/character/player/jump/jump_01.png" id="19_yynj7"]
-[ext_resource type="Texture2D" uid="uid://cfupp4ifc0jb1" path="res://assets/character/player/run/run_01.png" id="20_3cwcn"]
 [ext_resource type="Texture2D" uid="uid://ciotg4lgtg6nt" path="res://assets/character/player/run/run_02.png" id="21_kprhq"]
-[ext_resource type="Texture2D" uid="uid://dyw5nu16tegb8" path="res://assets/character/player/run/run_03.png" id="22_83j3r"]
 [ext_resource type="Texture2D" uid="uid://bxyukn6ijarxu" path="res://assets/character/player/run/run_04.png" id="23_uqf2y"]
-[ext_resource type="Texture2D" uid="uid://centac882onqm" path="res://assets/character/player/run/run_05.png" id="24_hb043"]
 [ext_resource type="Texture2D" uid="uid://b3iltuqygfpb7" path="res://assets/character/player/run/run_06.png" id="25_ewoa8"]
 [ext_resource type="PackedScene" uid="uid://y1yfmd3wf7e2" path="res://scene/ember_ui.tscn" id="26_gqyry"]
 [ext_resource type="Texture2D" uid="uid://csp840f760uk1" path="res://assets/background/Level_3/01_langit.png" id="27_hveye"]
@@ -275,26 +272,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_3cwcn")
-}, {
-"duration": 1.0,
 "texture": ExtResource("21_kprhq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_83j3r")
-}, {
-"duration": 1.0,
 "texture": ExtResource("23_uqf2y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_hb043")
 }, {
 "duration": 1.0,
 "texture": ExtResource("25_ewoa8")
 }],
 "loop": 1,
 "name": &"run",
-"speed": 20.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_owiqf"]
@@ -422,6 +410,7 @@ zoom = Vector2(3.5, 3.5)
 limit_bottom = 999999
 limit_smoothed = true
 position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 script = ExtResource("8_hefqe")
 max_y = 1100.0
 
@@ -505,7 +494,7 @@ script = ExtResource("10_ecqsm")
 texture_filter = 1
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_wrplr")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1627780832]

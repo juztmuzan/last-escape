@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cfed3m6cgbh1c"]
+
+[ext_resource type="AudioStream" uid="uid://dj0ng61mopa3h" path="res://assets/Music/Time_For_Advanture.mp3" id="1_jatca"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=104010578]
+stream = ExtResource("1_jatca")
+autoplay = true
+bus = &"Backsound"
