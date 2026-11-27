@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c63hhsgeb5i33"]
 
 [ext_resource type="Script" uid="uid://vf345f6p3qq" path="res://script/moving_platform.gd" id="1_8w8fh"]
-[ext_resource type="Texture2D" uid="uid://b0mum7icklyxn" path="res://assets/tileset/platforms.png" id="2_x6s1t"]
+[ext_resource type="Texture2D" uid="uid://d0td0kecnj3ok" path="res://assets/tileset/platforms_restyled_godot.png" id="2_8w8fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrplr"]
 size = Vector2(32, 8)
@@ -11,7 +11,7 @@ script = ExtResource("1_8w8fh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=295624830]
 texture_filter = 1
-texture = ExtResource("2_x6s1t")
+texture = ExtResource("2_8w8fh")
 region_enabled = true
 region_rect = Rect2(16.010681, 0, 32.21968, 9.556221)
 
